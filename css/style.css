@@ -278,9 +278,45 @@ h2 {
     text-align: center;
 }
 
+.basics, .designProcess p {
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #474747;
+}
+
+.basics, .designProcess {
+    display: flex;
+    margin: auto;
+    width: 60%;
+}
+
+.team, .role, .time {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.basics h3 {
+    text-align: left;
+}
+
+.designStep {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.designProcess h3 {
+    text-align: left;
+}
+
 .textContainer{
     background-color: #F9F7F4;
     width: 60%;
+    color: #474747;
+    font-family: montserrat;
 }
 
 .quote {
@@ -288,7 +324,7 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     color: #474747;
-    padding-bottom: 16px;
+    padding-bottom: 32px;
     font-style: italic;
 }
 
@@ -306,9 +342,38 @@ h2 {
     margin-bottom: 80px;
 }
 
-.basics {
-    display: flex;
+.ideate {
+    display: grid;
+    margin: auto;
+    grid-template-rows: 75% 25%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "competitorText competitorPhoto"
+    "brainstormText brainstormPhoto";
 }
+
+#competitorText {
+    grid-area: competitorText;
+}
+
+#competitorPhoto {
+    grid-area: competitorPhoto;
+}
+
+#brainstormText {
+    grid-area: brainstormText;
+}
+
+#brainstormPhoto {
+    grid-area: brainstormPhoto;
+}
+
+.evaluate {
+    display: flex;
+    width: 60%;
+    padding: 16px;
+}
+
 
 /* Media Query Max-Width 1000px */
 
