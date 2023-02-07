@@ -301,6 +301,13 @@ h2 {
     text-align: left;
 }
 
+.designProcess {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 96px;
+}
+
 .designStep {
     width: 25%;
     display: flex;
@@ -343,9 +350,14 @@ h2 {
 }
 
 .ideate {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #474747;
+    margin: 0 10% 96px 10%;
     display: grid;
-    margin: auto;
-    grid-template-rows: 75% 25%;
+    grid-template-rows: 60% 40%;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     "competitorText competitorPhoto"
@@ -368,11 +380,40 @@ h2 {
     grid-area: brainstormPhoto;
 }
 
-.evaluate {
+#features {
     display: flex;
-    width: 60%;
-    padding: 16px;
+    flex-direction: column;
 }
+
+.evaluate {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #474747;
+    margin: 0 10% 96px 10%;
+    display: grid;
+    grid-template-rows: 75% 25;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "evalText evalPhoto"
+    "findingsText findingsText";
+}
+
+#evalText {
+    grid-area: evalText;
+    display: flex;
+    flex-direction: column;
+}
+
+#evalPhoto {
+    grid-area: evalPhoto;
+}
+
+#findingsText {
+    grid-area: findingsText;
+}
+
 
 
 /* Media Query Max-Width 1000px */
