@@ -76,7 +76,7 @@ h1{
     font-family: Source Serif Pro;
     font-size: 48px;
     font-weight: 400;
-    padding-left: 32px;
+    padding: 32px;
 }
 
 .aboutHome p { 
@@ -240,6 +240,7 @@ button {
 .pageTitle {
     color: #474747;
     text-align: center;
+    padding: 0px;
 }
 
 h3 {
@@ -284,21 +285,23 @@ h2 {
     color: #474747;
 }
 
-.basics, .designProcess {
+.basics {
     display: flex;
     margin: auto;
     width: 60%;
 }
 
-.team, .role, .time {
-    width: 33%;
+.basicInfo {
     display: flex;
+    width: 33.3%;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
-.basics h3 {
-    text-align: left;
+.basics p {
+    text-align: center;
 }
 
 .designProcess {
@@ -313,6 +316,7 @@ h2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .designProcess h3 {
@@ -320,10 +324,7 @@ h2 {
 }
 
 .textContainer{
-    background-color: #F9F7F4;
     width: 60%;
-    color: #474747;
-    font-family: montserrat;
 }
 
 .quote {
@@ -331,8 +332,9 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     color: #474747;
-    padding-bottom: 32px;
     font-style: italic;
+    display: flex;
+    margin: 0 20% 96px 20%;
 }
 
 .overview, .research, .design, .prototype, .conclude {
@@ -346,7 +348,7 @@ h2 {
 }
 
 .research {
-    margin-bottom: 80px;
+    margin-bottom: 32px;
 }
 
 .ideate {
@@ -355,13 +357,14 @@ h2 {
     font-weight: 500;
     line-height: 30px;
     color: #474747;
-    margin: 0 10% 96px 10%;
+    margin: 0 20% 96px 20%;
     display: grid;
     grid-template-rows: 60% 40%;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     "competitorText competitorPhoto"
     "brainstormText brainstormPhoto";
+    gap: 8px;
 }
 
 #competitorText {
@@ -370,6 +373,8 @@ h2 {
 
 #competitorPhoto {
     grid-area: competitorPhoto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #brainstormText {
@@ -378,6 +383,8 @@ h2 {
 
 #brainstormPhoto {
     grid-area: brainstormPhoto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #features {
@@ -391,13 +398,14 @@ h2 {
     font-weight: 500;
     line-height: 30px;
     color: #474747;
-    margin: 0 10% 96px 10%;
+    margin: 0 20% 96px 20%;
     display: grid;
     grid-template-rows: 75% 25;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     "evalText evalPhoto"
     "findingsText findingsText";
+    gap: 8px;
 }
 
 #evalText {
@@ -408,12 +416,13 @@ h2 {
 
 #evalPhoto {
     grid-area: evalPhoto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #findingsText {
     grid-area: findingsText;
 }
-
 
 
 /* Media Query Max-Width 1000px */
