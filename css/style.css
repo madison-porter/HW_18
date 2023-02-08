@@ -9,6 +9,7 @@ header {
     background-color: #474747;
     color: #F9F7F4;
     top: 0;
+    height: 110px;
     position: sticky;
     display: flex;
     align-items: center;
@@ -237,6 +238,10 @@ button {
 
 /* Featured Work */
 
+.featuredWork h3 {
+    width: 60%;
+}
+
 .pageTitle {
     color: #474747;
     text-align: center;
@@ -248,9 +253,7 @@ h3 {
     font-family: Source Serif Pro;
     font-size: 24px;
     font-weight: 700;
-    width: 60%;
     text-align: center;
-
 }
 
 .aboutProject {
@@ -272,6 +275,7 @@ h3 {
 }
 
 /* Project Page */
+
 h2 {
     color: #474747;
     font-size: 36px;
@@ -314,13 +318,25 @@ h2 {
 .designStep {
     width: 25%;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+
+.subStep {
+    display: flex;
+    flex-direction: column;
+    margin-left: 72px;
 }
 
 .designProcess h3 {
     text-align: left;
+}
+
+.processIcon {
+    width: 56px;
+    height: 36px
 }
 
 .textContainer{
@@ -356,40 +372,11 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     line-height: 30px;
+    text-align: justify;
     color: #474747;
     margin: 0 20% 96px 20%;
-    display: grid;
-    grid-template-rows: 60% 40%;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 
-    "competitorText competitorPhoto"
-    "brainstormText brainstormPhoto";
-    gap: 8px;
-}
-
-#competitorText {
-    grid-area: competitorText;
-}
-
-#competitorPhoto {
-    grid-area: competitorPhoto;
     display: flex;
-    justify-content: flex-end;
-}
-
-#brainstormText {
-    grid-area: brainstormText;
-}
-
-#brainstormPhoto {
-    grid-area: brainstormPhoto;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#features {
-    display: flex;
-    flex-direction: column;
+    gap: 16px;
 }
 
 .evaluate {
@@ -397,31 +384,27 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     line-height: 30px;
+    text-align: justify;
     color: #474747;
     margin: 0 20% 96px 20%;
-    display: grid;
-    grid-template-rows: 75% 25;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 
-    "evalText evalPhoto"
-    "findingsText findingsText";
-    gap: 8px;
+    display: flex;
+    gap: 16px;
 }
 
-#evalText {
-    grid-area: evalText;
+.list {
     display: flex;
     flex-direction: column;
 }
 
-#evalPhoto {
-    grid-area: evalPhoto;
+.findings {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: justify;
+    color: #474747;
+    margin: 0 20% 96px 20%;
     display: flex;
-    justify-content: flex-end;
-}
-
-#findingsText {
-    grid-area: findingsText;
 }
 
 
@@ -440,6 +423,20 @@ h2 {
         display: flex;
         justify-content: flex-end;
         width: 25%;
+    }
+
+    .ideate, .evaluate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .processIcon {
+        display: none;
+    }
+
+    .subStep {
+        margin: auto;
     }
 }
 
@@ -491,5 +488,16 @@ h2 {
 
     .project1, .project2, .project3, .project4 {
         margin-bottom: 48px;
+    }
+
+    .basics, .designProcess {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .subStep p {
+        font-size: 16px;
     }
 }
